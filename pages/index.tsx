@@ -1,13 +1,10 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
 import ParticlesContainer from "@/components/ParticlesContainer";
 import ProjectBtn from "@/components/ProjectBtn";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/variant";
 import Avatar from "@/components/Avatar";
 
+// ! So many positions used => Check layer ...
 export default function Home() {
   return (
     <div className="bg-primary/60 h-full">
@@ -59,7 +56,7 @@ export default function Home() {
         {/* background image */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 "></div>
         {/* Particles */}
-        <div>Particles</div>
+        <ParticlesContainer />
         {/* max height and max width are the same as the image w/h */}
         <motion.div
           variants={fadeIn("up", 0.5)}
